@@ -11,12 +11,13 @@ export default function Body() {
           </div>
           <div className=" flex flex-col items-center  lg:items-start w-md lg:w-2xl sm:w-xl  gap-5 mr-0 lg:mr-20">
             <h1 className="text-2xl text-center lg:text-start sm:text-5xl">
-              Discover yourself with nature
+              What we do?
             </h1>
             <p className="text-base text-center lg:text-start">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt
-              facilisis nuncLorem ipsum dolor sit amet, consectetur adipiscing
-              elit. Tincidunt facilisis nunc
+              Designing and producing efficient extraction machines enabling
+              easy fiber extraction from banana pseudo-stem leaves. Crafting
+              various textiles and daily use items from pure banana fiber
+              Creating job opportunities in the rural areas.
             </p>
             <button className="border-3 border-white px-8 py-2 hover:cursor-pointer hover:bg-white hover:text-[#778D4D]">
               Learn More
