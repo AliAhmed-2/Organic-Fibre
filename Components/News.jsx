@@ -5,23 +5,24 @@ export default function NewsPage() {
   const updates = [
     {
       id: 1,
-      title: "Lush Gardens",
+      title: "REQUIRES LOW (MECHANICAL) ENERGY",
       desc: "Lorem ipsum dolor sit amet, consectetur donec adipiscing elit. Tincidunt facilisis nunc lorem ",
-      img: "/image1.png",
+      img: "/mechanical.jpg",
       date: "December 16, 2021",
     },
     {
       id: 3,
-      title: "Exotic Nature",
+      title: "REQUIRES NO CHEMICAL TO GROW AND PROCESS",
       desc: "Lorem ipsum dolor sit amet, consectetur donec adipiscing elit. Tincidunt facilisis nunc lorem  ",
-      img: "/image2.png",
+      img: "/chemical.png",
       date: "November 11, 2021",
     },
     {
       id: 2,
-      title: "It Starts with Soil",
+      title:
+        "AS THE TREE IS GROWN LOCALLY, IT IS ALSO LOW IN TRANSPORTATION IMPACT",
       desc: "Lorem ipsum dolor sit amet, consectetur donec adipiscing elit. Tincidunt facilisis nunc lorem ",
-      img: "/image3.png",
+      img: "/tree.jpg",
       date: "November 3, 2021",
     },
   ];
@@ -47,11 +48,9 @@ export default function NewsPage() {
               Plants Around Us
             </p>
             <p className="text-center w-xs sm:w-lg lg:text-start">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt
-              facilisis nuncLorem ipsum dolor sit.Lorem ipsum dolor sit amet,
-              consectetur adipiscing elit...
+              Generally woven in small communities on electric-free looms,
+              banana fiber is low impact and requires low (mechanical) energy
             </p>
-            <p className="italic">December 23, 2021</p>
           </div>
         </div>
         <div className="hidden sm:flex flex-col  w-xl">

@@ -1,23 +1,24 @@
 import Image from "next/image";
+import Link from "next/link";
 export default function CardsPage() {
   const cards = [
     {
       id: 1,
-      title: "Compost Tea with Yeast Extract",
-      desc: "Boosts plant vitality with essential nutrients and immunity support",
-      img: "/card1.png",
+      title: "Disposible Plates",
+      desc: "Eco-friendly, biodegradable plates made from natural banana fiber.",
+      img: "/disposible_plates.png",
     },
     {
       id: 2,
-      title: "Sterilized Compost with Growth-Promoting Microorganism",
-      desc: "Encourages faster growth with carefully selected beneficial microbes.",
-      img: "/card2.png",
+      title: "Wallet",
+      desc: "Stylish wallet crafted from sustainable banana fiber",
+      img: "/wallet.png",
     },
     {
       id: 3,
-      title: "Autoclaved Compost",
-      desc: "Improves soil structure and supports beneficial microbes",
-      img: "/card3.png",
+      title: "Loom Thread",
+      desc: "Strong, natural loom thread spun from banana fiber",
+      img: "/loom_thread.png",
     },
   ];
   return (
@@ -51,6 +52,9 @@ export default function CardsPage() {
               </div>
             </div>
           ))}
+        </div>
+        <div className="hover:text-[#778D4D]">
+          <Link href={"/products"}>View All Products</Link>
         </div>
       </div>
     </div>

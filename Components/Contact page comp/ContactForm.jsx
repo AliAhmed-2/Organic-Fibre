@@ -14,7 +14,7 @@ export default function ContactForm() {
   return (
     <form
       ref={formRef}
-      action="https://formspree.io/f/xzdzpbqr"
+      action="https://formspree.io/f/mwvvldly"
       method="POST"
       onSubmit={handleSubmit}
       className="flex flex-col gap-20"
