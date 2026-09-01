@@ -1,31 +1,121 @@
+import React from "react";
 import Image from "next/image";
-import seating from "public/seating.jpg";
+import Link from "next/link";
 import plant2 from "public/plant2.jpg";
+import seating from "public/seating.jpg";
+import { HiOutlineCog, HiOutlineSparkles, HiOutlineUserGroup, HiArrowRight } from "react-icons/hi";
+
 export default function Body() {
+  const pillars = [
+    {
+      icon: <HiOutlineCog className="text-2xl text-[#B5E8C1]" />,
+      title: "Indigenous Machinery Engineering",
+      desc: "Designing and manufacturing high-torque, energy-efficient banana fiber extractor machines with readily available modular spare parts.",
+    },
+    {
+      icon: <HiOutlineSparkles className="text-2xl text-[#B5E8C1]" />,
+      title: "Eco-Product Innovation",
+      desc: "Crafting sustainable daily-use alternatives including biodegradable tableware, handmade stationery, vegan leather, and spun loom yarn.",
+    },
+    {
+      icon: <HiOutlineUserGroup className="text-2xl text-[#B5E8C1]" />,
+      title: "Rural Farmer Empowerment",
+      desc: "Converting discarded post-harvest banana stems into profitable cash streams and generating green micro-enterprises in agricultural belts.",
+    },
+  ];
+
   return (
-    <div className="bg-[#778D4D]">
-      <div className="flex flex-col py-20 lg:ml-8  lg:px-40 gap-20">
-        <div className="flex flex-col lg:flex-row items-center gap-20  text-white  ">
-          <div>
-            <Image src={plant2} alt="plant" className="h-60 w-full" />
+    <section className="bg-gradient-to-b from-[#778D4D] to-[#5A6E37] text-white py-16 sm:py-24 px-6 sm:px-12 lg:px-24">
+      <div className="max-w-7xl mx-auto flex flex-col gap-16">
+        
+        {/* Top Split: Image + Overview Text */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+          
+          {/* Plant Image */}
+          <div className="lg:col-span-5 relative w-full h-80 sm:h-96 rounded-3xl overflow-hidden shadow-2xl border-4 border-white/10 group">
+            <Image
+              src={plant2}
+              alt="Banana Stem and Natural Fiber Processing"
+              fill
+              className="object-cover transition-transform duration-700 group-hover:scale-105"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+            <div className="absolute bottom-4 left-4 right-4 p-3 rounded-xl bg-white/20 backdrop-blur-md text-xs font-semibold text-white border border-white/20">
+              🌱 Zero Waste • 100% Organic Cellulose Fiber
+            </div>
           </div>
-          <div className=" flex flex-col items-center  lg:items-start w-md lg:w-2xl sm:w-xl  gap-5 mr-0 lg:mr-20">
-            <h1 className="text-2xl text-center lg:text-start sm:text-5xl">
-              What we do?
-            </h1>
-            <p className="text-base text-center lg:text-start">
-              Designing and producing efficient extraction machines enabling
-              easy fiber extraction from banana pseudo-stem leaves. Crafting
-              various textiles and daily use items from pure banana fiber
-              Creating job opportunities in the rural areas.
+
+          {/* Text Content */}
+          <div className="lg:col-span-7 flex flex-col items-center lg:items-start text-center lg:text-left gap-5">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/15 backdrop-blur-md text-[#B5E8C1] text-xs font-bold tracking-widest uppercase border border-white/20">
+              SUSTAINABLE CIRCULAR ENTERPRISE
+            </div>
+
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-tight">
+              What We Do & Why It Matters
+            </h2>
+
+            <p className="text-stone-100 text-sm sm:text-base lg:text-lg leading-relaxed font-normal">
+              Every year, millions of tons of banana stems are burned or discarded as agricultural waste. 
+              At Organic Fiber, we develop the machinery to mechanically extract high-tensile natural fibers from these stems 
+              and convert them into high-value commercial eco-products without harsh chemical processing.
             </p>
-            <button className="border-3 border-white px-8 py-2 hover:cursor-pointer hover:bg-white hover:text-[#778D4D]">
-              Learn More
-            </button>
+
+            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-2">
+              <Link
+                href="/machine-parts"
+                className="px-7 py-3 rounded-full bg-white hover:bg-stone-100 text-[#343D33] font-bold text-sm shadow-md hover:shadow-lg transition-all duration-200 flex items-center gap-2 cursor-pointer"
+              >
+                Inspect Extraction Machinery
+                <HiArrowRight />
+              </Link>
+              <Link
+                href="/about"
+                className="px-7 py-3 rounded-full bg-white/15 hover:bg-white/25 text-white border border-white/30 font-semibold text-sm backdrop-blur-md transition-all duration-200"
+              >
+                Our Journey & Impact
+              </Link>
+            </div>
+          </div>
+
+        </div>
+
+        {/* 3 Pillars Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-4">
+          {pillars.map((pillar, idx) => (
+            <div
+              key={idx}
+              className="p-6 rounded-3xl bg-white/10 backdrop-blur-md border border-white/15 hover:bg-white/15 hover:border-white/30 transition-all duration-300 flex flex-col gap-3 shadow-lg group"
+            >
+              <div className="p-3 rounded-2xl bg-white/10 w-fit group-hover:scale-110 transition-transform">
+                {pillar.icon}
+              </div>
+              <h3 className="font-bold text-lg text-white">
+                {pillar.title}
+              </h3>
+              <p className="text-xs sm:text-sm text-stone-200 leading-relaxed font-normal">
+                {pillar.desc}
+              </p>
+            </div>
+          ))}
+        </div>
+
+        {/* Wide Seating / Workshop Visual */}
+        <div className="relative w-full h-48 sm:h-72 rounded-3xl overflow-hidden shadow-2xl border-4 border-white/10">
+          <Image
+            src={seating}
+            alt="Organic Fiber Sustainable Workshop & Living"
+            fill
+            className="object-cover"
+          />
+          <div className="absolute inset-0 bg-black/30 flex items-center justify-center p-6 text-center">
+            <p className="text-white text-base sm:text-xl font-bold max-w-2xl drop-shadow-md">
+              &ldquo;Connecting sustainable agricultural technology with mindful, earth-positive everyday living.&rdquo;
+            </p>
           </div>
         </div>
-        <Image src={seating} alt="seating area" className="hidden md:flex" />
+
       </div>
-    </div>
+    </section>
   );
 }
