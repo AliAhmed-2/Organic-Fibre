@@ -19,7 +19,7 @@ export const PRODUCTS_CATALOG = [
     title: "Raw Banana Fiber Hank",
     category: "Raw Fiber & Pulp",
     tag: "High Tensile",
-    material: "100% Pure Banana Pseudo-Stem Fiber",
+    material: "Pure Banana Pseudo-Stem Fiber",
     origin: "Mechanically Decorticated & Sun-Dried",
     desc: "Long, lustrous natural fiber strands extracted from mature banana stems. High tensile strength, lightweight, and ideal for textile spinning, rope making, and handicraft braiding.",
     fullDesc: "Our primary raw banana fiber is extracted mechanically to preserve fiber length and cellular integrity. Free from chemical bleaching or synthetic resins, it provides superior tensile strength and moisture absorption compared to standard natural bast fibers.",
@@ -36,15 +36,15 @@ export const PRODUCTS_CATALOG = [
     id: 2,
     title: "Banana Cotton Pulp",
     category: "Raw Fiber & Pulp",
-    tag: "100% Bio-Cellulose",
+    tag: "Plant Cellulose",
     material: "Refined Degummed Banana Cellulose",
     origin: "Eco-Washed & Softened",
     desc: "Ultra-soft, biodegradable fluffy cellulose pulp suitable for eco-textile blending, non-woven hygiene items, medical absorbent pads, and specialty craft papers.",
-    fullDesc: "Through advanced eco-refining and natural degumming, we convert rough banana fibers into cloud-like cotton pulp. Highly absorbent, hypoallergenic, and 100% home compostable.",
+    fullDesc: "Through advanced eco-refining and natural degumming, we convert rough banana fibers into cloud-like cotton pulp. Highly absorbent, hypoallergenic, and home compostable.",
     applications: ["Sanitary & Hygiene Non-Wovens", "Eco-Cotton Blends", "Specialty Paper Pulp", "Thermal Insulation"],
     specs: {
-      "Purity": "99.2% Pure Cellulose",
-      "Biodegradability": "100% within 45 days",
+      "Purity": "High-Purity Cellulose",
+      "Biodegradability": "Naturally Biodegradable",
       "Texture": "Ultra-soft staple fiber",
       "Absorbency Rate": "> 18x dry weight",
     },
@@ -63,7 +63,7 @@ export const PRODUCTS_CATALOG = [
     specs: {
       "GSM Range": "120 GSM – 350 GSM",
       "Folding Endurance": "> 2,000 double folds",
-      "Acid Content": "100% Acid-Free (Archival Quality)",
+      "Acid Content": "Acid-Free",
       "Finishes Available": "Deckle edge, Smooth calendered, Textured",
     },
     img: "/banana_paper_folders.jpg",
@@ -75,7 +75,7 @@ export const PRODUCTS_CATALOG = [
     tag: "Heavy Duty",
     material: "Banana Fiber Reinforced Kraft Sheet",
     origin: "Stitched & Twisted Rope Handle",
-    desc: "Robust, stylish eco-friendly retail shopping bags with reinforced handles. 100% plastic-free alternative for boutiques, events, and supermarkets.",
+    desc: "Robust, stylish eco-friendly retail shopping bags with reinforced handles. plastic-free alternative for boutiques, events, and supermarkets.",
     fullDesc: "Designed with high-tensile banana fibers interwoven into natural kraft paper, providing superior load-bearing capacity and puncture resistance while remaining fully compostable.",
     applications: ["Retail Shopping Bags", "Corporate Event Gifting", "Boutique Packaging", "Food Takeaway Bags"],
     specs: {
@@ -90,10 +90,10 @@ export const PRODUCTS_CATALOG = [
     id: 5,
     title: "Molded Plates & Bowls",
     category: "Biodegradable Tableware",
-    tag: "100% Compostable",
+    tag: "Compostable",
     material: "Hot-Pressed Molded Banana Pulp",
     origin: "Steam-Sterilized & Molded",
-    desc: "Sturdy, microwave-safe, leak-proof disposable plates and round bowls. Certified compostable in backyard soil within 60 days.",
+    desc: "Sturdy, microwave-safe, leak-proof disposable plates and round bowls. Compostable after use.",
     fullDesc: "A direct replacement for toxic single-use polystyrene and plastic thermocol dinnerware. Heat-tolerant up to 120°C and naturally oil/grease resistant without fluorochemicals (PFAS-free).",
     applications: ["Catering & Banquets", "Restaurants & Food Trucks", "Daily Household Dining", "Outdoor Picnics"],
     specs: {
@@ -118,7 +118,7 @@ export const PRODUCTS_CATALOG = [
       "Thickness": "0.8 mm – 1.4 mm",
       "Tensile Strength": "Cross-grain reinforced matrix",
       "Finish": "Matte, Glossy & Embossed Grains",
-      "Eco Footprint": "75% lower carbon impact than cowhide",
+      "Eco Footprint": "Plant-based alternative to animal leather",
     },
     img: "/vegan_leather.png",
   },
@@ -246,7 +246,7 @@ export default function Products() {
       <div className="flex flex-col items-center text-center gap-4 mb-12">
         <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#EBF3E4] text-[#4E622B] text-xs font-bold tracking-wider uppercase border border-[#778D4D]/30">
           <HiOutlineSparkles className="text-base text-[#778D4D]" />
-          100% CIRCULAR SUSTAINABILITY
+          CIRCULAR & SUSTAINABLE
         </div>
         
         <h1 className="text-3xl sm:text-5xl font-black text-gray-900 tracking-tight">
@@ -269,8 +269,8 @@ export default function Products() {
       <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-4 rounded-3xl border-2 border-gray-200/80 shadow-sm mb-10">
         
         {/* Search Input */}
-        <div className="relative w-full md:w-80">
-          <HiSearch className="absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-400 text-lg" />
+        <div className="relative w-full md:w-80 md:shrink-0">
+          <HiSearch className="absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-500 text-lg" />
           <input
             type="text"
             placeholder="Search products, material, specs..."
@@ -281,7 +281,7 @@ export default function Products() {
           {searchQuery && (
             <button
               onClick={() => setSearchQuery("")}
-              className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600"
+              className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-600"
             >
               <HiX size={16} />
             </button>
@@ -289,7 +289,7 @@ export default function Products() {
         </div>
 
         {/* Category Pills */}
-        <div className="flex items-center gap-2 overflow-x-auto w-full md:w-auto pb-1 md:pb-0 scrollbar-none">
+        <div className="flex flex-wrap items-center gap-2 w-full md:w-auto md:flex-1 md:justify-end">
           {categories.map((cat) => {
             const isSelected = selectedCategory === cat;
             const count =
@@ -310,7 +310,7 @@ export default function Products() {
                 `}
               >
                 <span>{cat}</span>
-                <span className={`text-[10px] px-1.5 py-0.2 rounded-full ${isSelected ? "bg-white/20 text-white" : "bg-gray-200 text-gray-700"}`}>
+                <span className={`text-xs px-1.5 py-0.2 rounded-full ${isSelected ? "bg-white/20 text-white" : "bg-gray-200 text-gray-700"}`}>
                   {count}
                 </span>
               </button>
@@ -347,17 +347,17 @@ export default function Products() {
                     fill
                     className="object-contain p-2 transition-transform duration-500 group-hover:scale-105"
                   />
-                  <span className="absolute top-3 left-3 px-2.5 py-0.5 rounded-full bg-white/90 backdrop-blur-sm text-[10px] font-extrabold text-[#778D4D] border border-gray-200 shadow-sm">
+                  <span className="absolute top-3 left-3 px-2.5 py-0.5 rounded-full bg-white/90 backdrop-blur-sm text-xs font-extrabold text-[#778D4D] border border-gray-200 shadow-sm">
                     {item.tag}
                   </span>
-                  <span className="absolute top-3 right-3 px-2 py-0.5 rounded-md bg-[#343D33]/80 backdrop-blur-sm text-[9px] font-bold text-white shadow-xs">
+                  <span className="absolute top-3 right-3 px-2 py-0.5 rounded-md bg-[#1B3326]/80 backdrop-blur-sm text-xs font-bold text-white shadow-xs">
                     {item.category.split(" ")[0]}
                   </span>
                 </div>
 
                 {/* Body */}
                 <div className="p-5 flex flex-col gap-2">
-                  <span className="text-[11px] font-bold uppercase tracking-wider text-gray-400">
+                  <span className="text-xs font-bold uppercase tracking-wider text-gray-500">
                     {item.category}
                   </span>
                   
@@ -365,13 +365,13 @@ export default function Products() {
                     {item.title}
                   </h3>
 
-                  <p className="text-gray-600 text-xs leading-relaxed line-clamp-3">
+                  <p className="text-gray-600 text-sm leading-relaxed line-clamp-3">
                     {item.desc}
                   </p>
 
-                  <div className="mt-2 p-2.5 rounded-xl bg-stone-50 border border-gray-100 text-[11px] text-gray-700 flex flex-col gap-1">
+                  <div className="mt-2 p-2.5 rounded-xl bg-stone-50 border border-gray-100 text-xs text-gray-700 flex flex-col gap-1">
                     <div className="flex items-center justify-between">
-                      <span className="text-gray-400 font-medium">Composition:</span>
+                      <span className="text-gray-500 font-medium">Composition:</span>
                       <span className="font-semibold text-right truncate max-w-[130px]">{item.material}</span>
                     </div>
                   </div>
@@ -404,7 +404,7 @@ export default function Products() {
       )}
 
       {/* Bottom Wholesale Banner */}
-      <div className="mt-16 p-8 sm:p-12 rounded-3xl bg-gradient-to-r from-[#343D33] to-[#778D4D] text-white flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl">
+      <div className="mt-16 p-8 sm:p-12 rounded-3xl bg-gradient-to-r from-[#14291E] to-[#2F5A3E] text-white flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl">
         <div className="flex flex-col gap-2 text-center md:text-left">
           <span className="text-xs font-bold uppercase tracking-widest text-[#B5E8C1]">
             B2B WHOLESALE & CUSTOM ORDERS
@@ -412,7 +412,7 @@ export default function Products() {
           <h2 className="text-2xl sm:text-3xl font-black">
             Looking for Bulk Raw Banana Fiber or OEM Manufacturing?
           </h2>
-          <p className="text-stone-200 text-xs sm:text-sm max-w-xl">
+          <p className="text-stone-200 text-sm sm:text-base max-w-xl">
             We provide container-load shipments of raw fiber, refined degummed cotton pulp, molded tableware, and custom product development for industrial brands worldwide.
           </p>
         </div>
@@ -467,7 +467,7 @@ export default function Products() {
             </div>
 
             {/* Description */}
-            <div className="p-4 rounded-2xl bg-[#F4F7F0] border border-[#778D4D]/20 text-xs sm:text-sm text-gray-700 leading-relaxed">
+            <div className="p-4 rounded-2xl bg-[#F4F7F0] border border-[#778D4D]/20 text-sm sm:text-base text-gray-700 leading-relaxed">
               <p className="font-semibold text-gray-900 mb-1">Product Overview:</p>
               <p>{activeModalProduct.fullDesc}</p>
             </div>
@@ -499,7 +499,7 @@ export default function Products() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {Object.entries(activeModalProduct.specs).map(([key, val], idx) => (
                   <div key={idx} className="p-3 rounded-xl bg-gray-50 border border-gray-200 flex flex-col">
-                    <span className="text-[11px] text-gray-400 font-semibold uppercase tracking-wider">
+                    <span className="text-xs text-gray-500 font-semibold uppercase tracking-wider">
                       {key}
                     </span>
                     <span className="text-xs font-bold text-gray-900 mt-0.5">

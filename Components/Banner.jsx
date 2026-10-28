@@ -6,10 +6,10 @@ import { HiArrowRight, HiOutlineShieldCheck, HiOutlineSparkles, HiOutlineCog } f
 
 export default function Banner() {
   const stats = [
-    { num: "500+ Tons", label: "Stem Waste Diverted" },
-    { num: "98% Purity", label: "Natural Fiber Yield" },
-    { num: "100% Eco", label: "Biodegradable Goods" },
-    { num: "150-200 kg/h", label: "Machine Processing" },
+    { num: "100%", label: "Plant-Based Fiber" },
+    { num: "~60%", label: "Cellulose Content" },
+    { num: "Zero", label: "Chemical Baths Needed" },
+    { num: "150-200 kg/h", label: "Machine Throughput" },
   ];
 
   return (

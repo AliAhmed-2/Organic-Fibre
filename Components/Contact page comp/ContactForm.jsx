@@ -59,7 +59,7 @@ function FormContent() {
             <h3 className="text-2xl sm:text-3xl font-black text-gray-900 mt-1">
               Send Us a Message
             </h3>
-            <p className="text-gray-500 text-xs sm:text-sm mt-1">
+            <p className="text-gray-500 text-sm sm:text-base mt-1">
               Fill in your details below and our team will provide technical datasheets, quotations, or sample kits.
             </p>
           </div>
@@ -72,7 +72,7 @@ function FormContent() {
                 type="text"
                 name="firstName"
                 required
-                placeholder="e.g. John"
+                placeholder="e.g. Ahmed"
                 className="w-full px-4 py-3 text-sm rounded-xl border border-gray-200 focus:outline-none focus:border-[#778D4D] focus:ring-2 focus:ring-[#778D4D]/20 bg-gray-50/50"
               />
             </div>
@@ -82,7 +82,7 @@ function FormContent() {
                 type="text"
                 name="lastName"
                 required
-                placeholder="e.g. Doe"
+                placeholder="e.g. Khan"
                 className="w-full px-4 py-3 text-sm rounded-xl border border-gray-200 focus:outline-none focus:border-[#778D4D] focus:ring-2 focus:ring-[#778D4D]/20 bg-gray-50/50"
               />
             </div>
@@ -96,7 +96,7 @@ function FormContent() {
                 type="email"
                 name="email"
                 required
-                placeholder="john@company.com"
+                placeholder="name@company.com"
                 className="w-full px-4 py-3 text-sm rounded-xl border border-gray-200 focus:outline-none focus:border-[#778D4D] focus:ring-2 focus:ring-[#778D4D]/20 bg-gray-50/50"
               />
             </div>
@@ -105,7 +105,7 @@ function FormContent() {
               <input
                 type="tel"
                 name="phone"
-                placeholder="+1 (555) 000-0000"
+                placeholder="e.g. 0300 1234567"
                 className="w-full px-4 py-3 text-sm rounded-xl border border-gray-200 focus:outline-none focus:border-[#778D4D] focus:ring-2 focus:ring-[#778D4D]/20 bg-gray-50/50"
               />
             </div>
@@ -156,7 +156,7 @@ function FormContent() {
 
           {/* Submit */}
           <div className="flex items-center justify-between pt-2">
-            <span className="text-[11px] text-gray-400">
+            <span className="text-xs text-gray-500">
               * Required fields. We respect your privacy.
             </span>
             <button

@@ -55,7 +55,7 @@ export default function MachineSpecs() {
         {/* Specifications Table (7 cols) */}
         <div className="lg:col-span-7 bg-white rounded-3xl border-2 border-gray-200/80 shadow-lg overflow-hidden flex flex-col">
           
-          <div className="bg-[#343D33] p-4 sm:p-5 text-white flex items-center justify-between">
+          <div className="bg-[#1B3326] p-4 sm:p-5 text-white flex items-center justify-between">
             <div className="flex items-center gap-3">
               <div className="p-2 rounded-xl bg-white/10">
                 <HiOutlineSparkles className="text-xl text-[#B5E8C1]" />
@@ -64,13 +64,13 @@ export default function MachineSpecs() {
                 <h3 className="font-bold text-base sm:text-lg">
                   Machine Technical Parameters
                 </h3>
-                <p className="text-xs text-stone-300">
+                <p className="text-sm text-stone-300">
                   Standard Industrial Model: BFE-3500 Pro
                 </p>
               </div>
             </div>
             <span className="hidden sm:inline-block px-3 py-1 bg-[#778D4D] rounded-full text-xs font-bold">
-              ISO Certified
+              Quality Checked
             </span>
           </div>
 
@@ -83,7 +83,7 @@ export default function MachineSpecs() {
                 <span className="font-semibold text-gray-700 sm:w-1/2">
                   {spec.label}
                 </span>
-                <span className="font-bold text-gray-900 sm:w-1/2 sm:text-right mt-1 sm:mt-0 text-[#343D33]">
+                <span className="font-bold text-gray-900 sm:w-1/2 sm:text-right mt-1 sm:mt-0 text-[#1B3326]">
                   {spec.value}
                 </span>
               </div>
@@ -105,7 +105,7 @@ export default function MachineSpecs() {
                 <h3 className="font-bold text-gray-900 text-base sm:text-lg">
                   Maintenance & Safety Guide
                 </h3>
-                <p className="text-xs text-gray-600">
+                <p className="text-sm text-gray-600">
                   Guidelines for uninterrupted long-term production
                 </p>
               </div>
@@ -124,7 +124,7 @@ export default function MachineSpecs() {
                     <span className="font-bold text-xs sm:text-sm text-gray-900">
                       {tip.title}
                     </span>
-                    <span className="text-[11px] sm:text-xs text-gray-600 leading-relaxed mt-0.5">
+                    <span className="text-sm text-gray-600 leading-relaxed mt-0.5">
                       {tip.desc}
                     </span>
                   </div>

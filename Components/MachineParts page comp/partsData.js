@@ -181,7 +181,7 @@ export const KEY_FEATURES = [
   {
     id: 1,
     title: "High Extraction Efficiency",
-    desc: "Optimized blade angle and high-speed drum deliver up to 98% pure, undamaged natural fibers with rapid stem throughput.",
+    desc: "Optimized blade angle and high-speed drum deliver clean, undamaged natural fibers with rapid stem throughput.",
     icon: "⚡",
   },
   {
@@ -229,5 +229,5 @@ export const MACHINE_TECHNICAL_SPECS = [
   { label: "Machine Dimensions (L x W x H)", value: "1150 mm x 780 mm x 1280 mm" },
   { label: "Total Net Weight", value: "145 kg (Approx.)" },
   { label: "Recommended Maintenance Interval", value: "Grease bearings every 100 operating hours" },
-  { label: "Warranty Coverage", value: "1 Year Comprehensive + Lifetime Parts Support" },
+  { label: "Warranty Coverage", value: "Available on request, ask our team for details" },
 ];

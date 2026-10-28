@@ -62,7 +62,7 @@ export default function PartsGrid() {
           
           {/* Search Bar */}
           <div className="relative w-full md:w-80">
-            <HiSearch className="absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-400 text-lg" />
+            <HiSearch className="absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-500 text-lg" />
             <input
               type="text"
               placeholder="Search part name, material, color..."
@@ -73,7 +73,7 @@ export default function PartsGrid() {
             {searchQuery && (
               <button
                 onClick={() => setSearchQuery("")}
-                className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600"
+                className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-600"
               >
                 <HiX size={16} />
               </button>
@@ -126,7 +126,7 @@ export default function PartsGrid() {
                   <h3 className="font-extrabold text-sm text-gray-800 tracking-wider uppercase group-hover:text-[#778D4D] transition-colors">
                     {item.no}. {item.name}
                   </h3>
-                  <span className={`px-2 py-0.5 rounded-full text-[10px] font-bold border ${item.colorBadge}`}>
+                  <span className={`px-2 py-0.5 rounded-full text-xs font-bold border ${item.colorBadge}`}>
                     {item.color}
                   </span>
                 </div>
@@ -141,7 +141,7 @@ export default function PartsGrid() {
                       className="object-contain transition-transform duration-500 group-hover:scale-105"
                     />
                   </div>
-                  <span className="absolute top-3 left-3 px-2 py-0.5 rounded-md bg-white/90 backdrop-blur-sm text-[10px] font-bold text-gray-600 shadow-sm border border-gray-200">
+                  <span className="absolute top-3 left-3 px-2 py-0.5 rounded-md bg-white/90 backdrop-blur-sm text-xs font-bold text-gray-600 shadow-sm border border-gray-200">
                     {item.category}
                   </span>
                 </div>
@@ -149,18 +149,18 @@ export default function PartsGrid() {
                 {/* Card Body Details */}
                 <div className="p-4 sm:p-5 flex flex-col flex-1 justify-between gap-4">
                   <div className="flex flex-col gap-2">
-                    <p className="text-xs text-gray-600 leading-relaxed">
+                    <p className="text-sm text-gray-600 leading-relaxed">
                       {item.shortDesc}
                     </p>
 
                     {/* Key Spec Snippet */}
-                    <div className="mt-2 p-2.5 rounded-xl bg-stone-50 border border-gray-100 text-[11px] flex flex-col gap-1 text-gray-700">
+                    <div className="mt-2 p-2.5 rounded-xl bg-stone-50 border border-gray-100 text-xs flex flex-col gap-1 text-gray-700">
                       <div className="flex items-center justify-between">
-                        <span className="text-gray-400 font-medium">Material:</span>
+                        <span className="text-gray-500 font-medium">Material:</span>
                         <span className="font-semibold text-right truncate max-w-[150px]">{item.material}</span>
                       </div>
                       <div className="flex items-center justify-between">
-                        <span className="text-gray-400 font-medium">Finish:</span>
+                        <span className="text-gray-500 font-medium">Finish:</span>
                         <span className="font-semibold text-right truncate max-w-[150px]">{item.finish}</span>
                       </div>
                     </div>
@@ -235,7 +235,7 @@ export default function PartsGrid() {
             </div>
 
             {/* Description */}
-            <div className="p-4 rounded-2xl bg-[#F4F7F0] border border-[#778D4D]/20 text-xs sm:text-sm text-gray-700 leading-relaxed">
+            <div className="p-4 rounded-2xl bg-[#F4F7F0] border border-[#778D4D]/20 text-sm sm:text-base text-gray-700 leading-relaxed">
               <p className="font-semibold text-gray-900 mb-1">Engineering Role & Purpose:</p>
               <p>{activeModalPart.fullDesc}</p>
             </div>
@@ -248,7 +248,7 @@ export default function PartsGrid() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {Object.entries(activeModalPart.specs).map(([key, val], idx) => (
                   <div key={idx} className="p-3 rounded-xl bg-gray-50 border border-gray-200 flex flex-col">
-                    <span className="text-[11px] text-gray-400 font-semibold uppercase tracking-wider">
+                    <span className="text-xs text-gray-500 font-semibold uppercase tracking-wider">
                       {key.replace(/([A-Z])/g, " $1")}
                     </span>
                     <span className="text-xs font-bold text-gray-900 mt-0.5">
@@ -262,11 +262,11 @@ export default function PartsGrid() {
             {/* Material & Finish */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
               <div className="p-3 rounded-xl bg-stone-50 border border-gray-200">
-                <span className="text-gray-400 font-medium block">Material Composition:</span>
+                <span className="text-gray-500 font-medium block">Material Composition:</span>
                 <span className="font-bold text-gray-900 mt-0.5 block">{activeModalPart.material}</span>
               </div>
               <div className="p-3 rounded-xl bg-stone-50 border border-gray-200">
-                <span className="text-gray-400 font-medium block">Coating / Surface Treatment:</span>
+                <span className="text-gray-500 font-medium block">Coating / Surface Treatment:</span>
                 <span className="font-bold text-gray-900 mt-0.5 block">{activeModalPart.finish}</span>
               </div>
             </div>

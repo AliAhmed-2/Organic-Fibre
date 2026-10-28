@@ -25,7 +25,7 @@ export default function Body() {
   ];
 
   return (
-    <section className="bg-gradient-to-b from-[#778D4D] to-[#5A6E37] text-white py-16 sm:py-24 px-6 sm:px-12 lg:px-24">
+    <section className="bg-gradient-to-b from-[#26472F] to-[#1A3524] text-white py-16 sm:py-24 px-6 sm:px-12 lg:px-24">
       <div className="max-w-7xl mx-auto flex flex-col gap-16">
         
         {/* Top Split: Image + Overview Text */}
@@ -41,7 +41,7 @@ export default function Body() {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
             <div className="absolute bottom-4 left-4 right-4 p-3 rounded-xl bg-white/20 backdrop-blur-md text-xs font-semibold text-white border border-white/20">
-              🌱 Zero Waste • 100% Organic Cellulose Fiber
+              🌱 Zero Waste • Natural Plant Fiber
             </div>
           </div>
 
@@ -64,7 +64,7 @@ export default function Body() {
             <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-2">
               <Link
                 href="/machine-parts"
-                className="px-7 py-3 rounded-full bg-white hover:bg-stone-100 text-[#343D33] font-bold text-sm shadow-md hover:shadow-lg transition-all duration-200 flex items-center gap-2 cursor-pointer"
+                className="px-7 py-3 rounded-full bg-white hover:bg-stone-100 text-[#1B3326] font-bold text-sm shadow-md hover:shadow-lg transition-all duration-200 flex items-center gap-2 cursor-pointer"
               >
                 Inspect Extraction Machinery
                 <HiArrowRight />
@@ -93,7 +93,7 @@ export default function Body() {
               <h3 className="font-bold text-lg text-white">
                 {pillar.title}
               </h3>
-              <p className="text-xs sm:text-sm text-stone-200 leading-relaxed font-normal">
+              <p className="text-sm sm:text-base text-stone-200 leading-relaxed font-normal">
                 {pillar.desc}
               </p>
             </div>

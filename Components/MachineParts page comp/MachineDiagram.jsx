@@ -107,7 +107,7 @@ export default function MachineDiagram({ onSelectPart }) {
                           isActive
                             ? "bg-[#778D4D] text-white ring-4 ring-white shadow-emerald-900/30"
                             : isHovered
-                            ? "bg-[#343D33] text-white ring-2 ring-white"
+                            ? "bg-[#1B3326] text-white ring-2 ring-white"
                             : part.color === "Blue"
                             ? "bg-blue-600 text-white ring-2 ring-white/90"
                             : part.color === "White"
@@ -121,7 +121,7 @@ export default function MachineDiagram({ onSelectPart }) {
 
                     {/* Desktop Floating Tag label */}
                     {(isActive || isHovered) && (
-                      <div className="hidden sm:inline-flex items-center px-2.5 py-1 rounded-md bg-gray-900/90 backdrop-blur-md text-white text-[11px] font-semibold whitespace-nowrap shadow-xl border border-white/20 animate-fade-in pointer-events-none">
+                      <div className="hidden sm:inline-flex items-center px-2.5 py-1 rounded-md bg-gray-900/90 backdrop-blur-md text-white text-xs font-semibold whitespace-nowrap shadow-xl border border-white/20 animate-fade-in pointer-events-none">
                         {part.no}. {part.name}
                       </div>
                     )}
@@ -130,7 +130,7 @@ export default function MachineDiagram({ onSelectPart }) {
               })}
 
               {/* Helper prompt bottom overlay */}
-              <div className="absolute bottom-2 left-2 right-2 px-3 py-1.5 bg-white/80 backdrop-blur-sm rounded-lg border border-gray-200/60 text-[11px] text-gray-600 flex items-center justify-between pointer-events-none">
+              <div className="absolute bottom-2 left-2 right-2 px-3 py-1.5 bg-white/80 backdrop-blur-sm rounded-lg border border-gray-200/60 text-xs text-gray-600 flex items-center justify-between pointer-events-none">
                 <span>💡 Tip: Tap numbers 1–8 on diagram to inspect</span>
                 <span className="font-semibold text-[#778D4D]">Active: {activePart.name}</span>
               </div>
@@ -163,7 +163,7 @@ export default function MachineDiagram({ onSelectPart }) {
                 <h3 className="text-lg sm:text-xl font-bold text-gray-900 mt-1">
                   {activePart.name}
                 </h3>
-                <p className="text-xs sm:text-sm text-gray-600 line-clamp-2">
+                <p className="text-sm sm:text-base text-gray-600 line-clamp-2">
                   {activePart.shortDesc}
                 </p>
 
@@ -212,12 +212,12 @@ export default function MachineDiagram({ onSelectPart }) {
           <div className="bg-white rounded-3xl border-2 border-gray-200/80 shadow-lg overflow-hidden flex flex-col">
             
             {/* Table Header Banner */}
-            <div className="bg-gradient-to-r from-[#343D33] to-[#778D4D] p-4 text-white flex items-center justify-between">
+            <div className="bg-gradient-to-r from-[#14291E] to-[#2F5A3E] p-4 text-white flex items-center justify-between">
               <div>
                 <h3 className="font-bold text-base sm:text-lg tracking-wide uppercase">
                   PARTS LIST
                 </h3>
-                <p className="text-[11px] text-emerald-100">
+                <p className="text-sm text-emerald-100">
                   Select a part below to view details
                 </p>
               </div>
@@ -230,7 +230,7 @@ export default function MachineDiagram({ onSelectPart }) {
             <div className="overflow-x-auto">
               <table className="w-full text-left border-collapse">
                 <thead>
-                  <tr className="bg-gray-100/80 text-gray-700 text-[11px] sm:text-xs font-bold uppercase tracking-wider border-b border-gray-200">
+                  <tr className="bg-gray-100/80 text-gray-700 text-xs sm:text-xs font-bold uppercase tracking-wider border-b border-gray-200">
                     <th className="py-2.5 px-3 text-center w-12">NO.</th>
                     <th className="py-2.5 px-4">PART NAME</th>
                     <th className="py-2.5 px-3 text-center">COLOR</th>
@@ -262,13 +262,13 @@ export default function MachineDiagram({ onSelectPart }) {
                             <span className="font-semibold group-hover:text-[#778D4D] transition-colors">
                               {part.name}
                             </span>
-                            <span className="text-[11px] text-gray-400 font-normal">
+                            <span className="text-xs text-gray-500 font-normal">
                               {part.tag}
                             </span>
                           </div>
                         </td>
                         <td className="py-2.5 px-3 text-center">
-                          <span className={`inline-block px-2.5 py-0.5 rounded-full text-[11px] font-semibold border ${part.colorBadge}`}>
+                          <span className={`inline-block px-2.5 py-0.5 rounded-full text-xs font-semibold border ${part.colorBadge}`}>
                             {part.color}
                           </span>
                         </td>
@@ -318,7 +318,7 @@ export default function MachineDiagram({ onSelectPart }) {
                     <span className="font-bold text-xs sm:text-sm text-gray-900">
                       {feature.title}
                     </span>
-                    <span className="text-[11px] text-gray-500 leading-snug mt-0.5">
+                    <span className="text-xs text-gray-500 leading-snug mt-0.5">
                       {feature.desc}
                     </span>
                   </div>

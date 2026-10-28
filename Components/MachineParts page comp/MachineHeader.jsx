@@ -18,8 +18,8 @@ export default function MachineHeader() {
     },
     {
       icon: <HiOutlineSparkles className="text-2xl text-[#778D4D]" />,
-      label: "Extraction Purity",
-      val: "98% Fiber Yield",
+      label: "Fiber Quality",
+      val: "Clean, Long Fibers",
       sub: "Damage-free natural strands",
     },
     {
@@ -61,7 +61,7 @@ export default function MachineHeader() {
           </a>
           <a
             href="#parts-catalog"
-            className="px-7 py-3 rounded-full bg-white hover:bg-stone-100 text-[#343D33] border border-gray-300 font-semibold text-sm sm:text-base shadow-sm hover:shadow transition-all duration-200 cursor-pointer flex items-center gap-2"
+            className="px-7 py-3 rounded-full bg-white hover:bg-stone-100 text-[#1B3326] border border-gray-300 font-semibold text-sm sm:text-base shadow-sm hover:shadow transition-all duration-200 cursor-pointer flex items-center gap-2"
           >
             View Individual Parts (8)
             <span>→</span>

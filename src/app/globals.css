@@ -4,7 +4,7 @@
   --background: #ffffff;
   --foreground: #171717;
   --brand-green: #778D4D;
-  --brand-dark: #343D33;
+  --brand-dark: #1B3326;
   --brand-light: #B5E8C1;
   --brand-cream: #F8FAF5;
 }
@@ -13,7 +13,7 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-brand: #778D4D;
-  --color-brand-dark: #343D33;
+  --color-brand-dark: #1B3326;
   --color-brand-light: #B5E8C1;
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
@@ -76,4 +76,9 @@ body {
   background: rgba(52, 61, 51, 0.85);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
+}
+
+.menu-open .gtranslate_wrapper,
+.menu-open .whatsapp-float {
+  display: none;
 }

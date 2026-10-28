@@ -1,14 +1,21 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { HiMenu, HiX, HiOutlineDownload, HiOutlineSearch } from "react-icons/hi";
+import { HiMenu, HiX, HiOutlineDownload, HiOutlinePhone } from "react-icons/hi";
+import { FaWhatsapp } from "react-icons/fa";
 import logo from "public/logo.png";
+import { CONTACT } from "./contactInfo";
 
 export default function NavBar({ variant = "light" }) {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
+
+  useEffect(() => {
+    document.body.classList.toggle("menu-open", isOpen);
+    return () => document.body.classList.remove("menu-open");
+  }, [isOpen]);
 
   const isDark = variant === "dark";
   const textClass = isDark ? "text-gray-900" : "text-white";
@@ -32,10 +39,10 @@ export default function NavBar({ variant = "light" }) {
           <Image src={logo} alt="Organic Fiber Logo" fill className="object-contain" priority />
         </div>
         <div className="flex flex-col">
-          <span className={`font-black text-lg sm:text-xl tracking-tight leading-none ${textClass}`}>
+          <span className={`notranslate font-black text-lg sm:text-xl tracking-tight leading-none ${textClass}`}>
             ORGANIC <span className="text-[#778D4D]">FIBER</span>
           </span>
-          <span className={`text-[10px] tracking-widest font-semibold uppercase mt-0.5 ${subTextClass}`}>
+          <span className={`text-xs tracking-widest font-semibold uppercase mt-0.5 ${subTextClass}`}>
             Clean Tech & Eco Goods
           </span>
         </div>
@@ -71,15 +78,15 @@ export default function NavBar({ variant = "light" }) {
 
       {/* Right Actions */}
       <div className="hidden md:flex items-center gap-4">
-        <Link
-          href="/machine-parts#interactive-diagram"
-          className={`p-2.5 rounded-full transition-colors ${
-            isDark ? "hover:bg-gray-100 text-gray-700" : "hover:bg-white/10 text-white"
+        <a
+          href={CONTACT.mobile.href}
+          className={`hidden lg:flex items-center gap-2 px-3 py-2 rounded-full font-bold text-sm transition-colors ${
+            isDark ? "hover:bg-gray-100 text-gray-800" : "hover:bg-white/10 text-white"
           }`}
-          title="Machine Diagram"
         >
-          <HiOutlineSearch size={20} />
-        </Link>
+          <HiOutlinePhone size={18} />
+          <span className="notranslate">{CONTACT.mobile.display}</span>
+        </a>
 
         <Link
           href="/contact"
@@ -104,7 +111,7 @@ export default function NavBar({ variant = "light" }) {
 
       {/* Mobile Drawer */}
       <div
-        className={`fixed inset-y-0 right-0 w-80 max-w-[85vw] bg-[#343D33] text-white shadow-2xl z-50 transform transition-transform duration-300 ease-in-out p-6 flex flex-col justify-between
+        className={`fixed inset-y-0 right-0 w-80 max-w-[85vw] bg-[#1B3326] text-white shadow-2xl z-50 transform transition-transform duration-300 ease-in-out p-6 flex flex-col justify-between
         ${isOpen ? "translate-x-0" : "translate-x-full"}`}
       >
         <div className="flex flex-col gap-6">
@@ -113,7 +120,7 @@ export default function NavBar({ variant = "light" }) {
               <div className="relative w-9 h-9">
                 <Image src={logo} alt="Logo" fill className="object-contain" />
               </div>
-              <span className="font-bold text-sm tracking-wide">ORGANIC FIBER</span>
+              <span className="notranslate font-bold text-sm tracking-wide">ORGANIC FIBER</span>
             </div>
             <button
               onClick={() => setIsOpen(false)}
@@ -153,7 +160,25 @@ export default function NavBar({ variant = "light" }) {
           >
             Request Quotation
           </Link>
-          <span className="text-[11px] text-center text-stone-400">
+          <div className="grid grid-cols-2 gap-3">
+            <a
+              href={CONTACT.mobile.href}
+              className="flex items-center justify-center gap-2 py-3 rounded-xl bg-white/10 hover:bg-white/20 text-white font-bold text-sm transition"
+            >
+              <HiOutlinePhone size={18} />
+              Call Us
+            </a>
+            <a
+              href={CONTACT.whatsapp}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center gap-2 py-3 rounded-xl bg-[#25D366] hover:bg-[#1EBE5A] text-white font-bold text-sm transition"
+            >
+              <FaWhatsapp size={18} />
+              WhatsApp
+            </a>
+          </div>
+          <span className="text-xs text-center text-stone-300">
             © 2025 Organic Fiber. All rights reserved.
           </span>
         </div>

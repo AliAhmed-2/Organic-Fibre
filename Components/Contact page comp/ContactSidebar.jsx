@@ -7,10 +7,12 @@ import {
   HiOutlineChatAlt2,
   HiOutlineShieldCheck,
 } from "react-icons/hi";
+import { FaWhatsapp } from "react-icons/fa";
+import { CONTACT } from "../contactInfo";
 
 export default function ContactSidebar() {
   return (
-    <div className="flex flex-col justify-between bg-gradient-to-b from-[#778D4D] to-[#456A00] text-white rounded-3xl w-full md:w-96 lg:w-[420px] p-8 sm:p-10 shadow-xl gap-10">
+    <div className="flex flex-col justify-between bg-gradient-to-b from-[#2F5A3E] to-[#14291E] text-white rounded-3xl w-full md:w-96 lg:w-[420px] p-8 sm:p-10 shadow-xl gap-10">
       <div className="flex flex-col gap-4">
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/15 text-[#B5E8C1] text-xs font-bold w-fit">
           <HiOutlineChatAlt2 className="text-base" />
@@ -19,7 +21,7 @@ export default function ContactSidebar() {
         <h2 className="text-2xl sm:text-3xl font-black tracking-tight">
           Let&apos;s Build Sustainable Solutions Together
         </h2>
-        <p className="text-stone-100 text-xs sm:text-sm leading-relaxed">
+        <p className="text-stone-100 text-sm sm:text-base leading-relaxed">
           Have inquiries regarding banana extraction machinery, spare parts,
           bulk fiber supplies, or custom eco-products? Our technical engineering
           team is here to assist.
@@ -32,12 +34,24 @@ export default function ContactSidebar() {
             <HiOutlinePhone size={20} />
           </div>
           <div className="flex flex-col">
-            <span className="text-xs text-stone-300 font-medium">
+            <span className="text-sm text-stone-200 font-medium">
               Direct Phone & WhatsApp
             </span>
-            <span className="font-bold text-white mt-0.5">
-              021-34510142 / +92 34823 20142
-            </span>
+            <a href={CONTACT.mobile.href} className="notranslate font-bold text-white text-base mt-0.5 hover:underline">
+              {CONTACT.mobile.display}
+            </a>
+            <a href={CONTACT.landline.href} className="notranslate font-bold text-white text-base hover:underline">
+              {CONTACT.landline.display}
+            </a>
+            <a
+              href={CONTACT.whatsapp}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-2 inline-flex w-fit items-center gap-2 px-4 py-2 rounded-full bg-[#25D366] hover:bg-[#1EBE5A] text-white font-bold text-sm transition-colors"
+            >
+              <FaWhatsapp size={18} />
+              Chat on WhatsApp
+            </a>
           </div>
         </div>
 
@@ -46,12 +60,12 @@ export default function ContactSidebar() {
             <HiOutlineMail size={20} />
           </div>
           <div className="flex flex-col">
-            <span className="text-xs text-stone-300 font-medium">
+            <span className="text-sm text-stone-200 font-medium">
               Sales & Engineering Support
             </span>
-            <span className="font-bold text-white mt-0.5">
-              <a href="mailto:contact@organicfiberhub.com">
-                contact@organicfiberhub.com
+            <span className="font-bold text-white mt-0.5 break-all">
+              <a href={`mailto:${CONTACT.email}`} className="notranslate hover:underline">
+                {CONTACT.email}
               </a>
             </span>
           </div>
@@ -62,12 +76,25 @@ export default function ContactSidebar() {
             <HiOutlineLocationMarker size={20} />
           </div>
           <div className="flex flex-col">
-            <span className="text-xs text-stone-300 font-medium">
+            <span className="text-sm text-stone-200 font-medium">
               Manufacturing & Tech Center
             </span>
-            <span className="font-bold text-white mt-0.5">
-              Office No 143 Salman Tower Malir City Karachi, Pakistan
-            </span>
+            <a
+              href={CONTACT.mapsUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-bold text-white mt-0.5 hover:underline"
+            >
+              {CONTACT.address}
+            </a>
+            <a
+              href={CONTACT.mapsUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm text-[#B5E8C1] font-semibold mt-1 hover:underline"
+            >
+              Open in Google Maps →
+            </a>
           </div>
         </div>
 
@@ -76,19 +103,19 @@ export default function ContactSidebar() {
             <HiOutlineClock size={20} />
           </div>
           <div className="flex flex-col">
-            <span className="text-xs text-stone-300 font-medium">
+            <span className="text-sm text-stone-200 font-medium">
               Business Operating Hours
             </span>
             <span className="font-bold text-white mt-0.5">
-              Mon – Sat: 9:00 AM – 6:30 PM (EST)
+              Mon – Sat: 9:00 AM – 6:30 PM (Pakistan Time)
             </span>
           </div>
         </div>
       </div>
 
-      <div className="pt-4 border-t border-white/20 flex items-center gap-2 text-xs text-stone-200">
+      <div className="pt-4 border-t border-white/20 flex items-center gap-2 text-sm text-stone-200">
         <HiOutlineShieldCheck className="text-lg text-[#B5E8C1]" />
-        <span>100% Data Confidentiality & Rapid Response</span>
+        <span>Your details are kept private</span>
       </div>
     </div>
   );

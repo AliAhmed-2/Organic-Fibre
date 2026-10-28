@@ -17,7 +17,7 @@ export default function CardsPage() {
       id: 2,
       title: "Banana Cotton Pulp",
       category: "Cellulose & Pulp",
-      tag: "100% Pure",
+      tag: "Pure Fiber",
       desc: "Soft, bleached biodegradable cellulose cotton pulp ideal for non-wovens, eco-textiles, and medical hygiene.",
       img: "/banana_cotton_pulp.jpg",
     },
@@ -73,20 +73,20 @@ export default function CardsPage() {
                     fill
                     className="object-contain p-2 transition-transform duration-500 group-hover:scale-105"
                   />
-                  <span className="absolute top-3 left-3 px-2.5 py-0.5 rounded-full bg-white/90 backdrop-blur-sm text-[10px] font-extrabold text-[#778D4D] border border-gray-200 shadow-sm">
+                  <span className="absolute top-3 left-3 px-2.5 py-0.5 rounded-full bg-white/90 backdrop-blur-sm text-xs font-extrabold text-[#778D4D] border border-gray-200 shadow-sm">
                     {item.tag}
                   </span>
                 </div>
 
                 {/* Content */}
                 <div className="p-5 flex flex-col gap-2">
-                  <span className="text-[11px] font-bold uppercase tracking-wider text-gray-400">
+                  <span className="text-xs font-bold uppercase tracking-wider text-gray-500">
                     {item.category}
                   </span>
                   <h3 className="font-bold text-lg text-gray-900 group-hover:text-[#778D4D] transition-colors">
                     {item.title}
                   </h3>
-                  <p className="text-gray-600 text-xs leading-relaxed line-clamp-3">
+                  <p className="text-gray-600 text-sm leading-relaxed line-clamp-3">
                     {item.desc}
                   </p>
                 </div>

@@ -15,7 +15,7 @@ export default function AboutCards() {
     {
       id: 1,
       title: "Zero-Waste Circularity",
-      subtitle: "100% Stem Utilization",
+      subtitle: "Whole-Stem Utilization",
       desc: "Every portion of the harvested banana stem is repurposed — high-tensile fiber for textiles and packaging, and nutrient-rich organic sap/pulp for natural vermicompost and liquid bio-fertilizers.",
       icon: <HiOutlineGlobeAlt className="text-3xl text-[#778D4D]" />,
     },
@@ -37,7 +37,7 @@ export default function AboutCards() {
       id: 4,
       title: "Chemical-Free Processing",
       subtitle: "Naturally Pure & Safe",
-      desc: "Our mechanical extraction and eco-degumming process consumes zero hazardous chlorine or toxic synthetic binders, producing 100% biodegradable and compostable products.",
+      desc: "Our mechanical extraction and eco-degumming process consumes zero hazardous chlorine or toxic synthetic binders, producing biodegradable and compostable products.",
       icon: <HiOutlineShieldCheck className="text-3xl text-[#778D4D]" />,
     },
   ];
@@ -79,13 +79,13 @@ export default function AboutCards() {
               <div className="p-3 rounded-2xl bg-[#EBF3E4] w-fit group-hover:bg-[#778D4D] group-hover:text-white transition-colors duration-300">
                 {item.icon}
               </div>
-              <span className="text-[11px] font-bold text-[#778D4D] uppercase tracking-wider">
+              <span className="text-xs font-bold text-[#778D4D] uppercase tracking-wider">
                 {item.subtitle}
               </span>
               <h3 className="text-lg font-bold text-gray-900 group-hover:text-[#778D4D] transition-colors">
                 {item.title}
               </h3>
-              <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">
+              <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
                 {item.desc}
               </p>
             </div>
@@ -116,7 +116,7 @@ export default function AboutCards() {
               <h4 className="font-bold text-base text-gray-900">
                 {step.title}
               </h4>
-              <p className="text-xs text-gray-600 leading-relaxed">
+              <p className="text-sm text-gray-600 leading-relaxed">
                 {step.desc}
               </p>
             </div>
@@ -125,10 +125,10 @@ export default function AboutCards() {
       </div>
 
       {/* CTA Box */}
-      <div className="p-8 rounded-3xl bg-[#343D33] text-white flex flex-col sm:flex-row items-center justify-between gap-6 shadow-xl">
+      <div className="p-8 rounded-3xl bg-[#1B3326] text-white flex flex-col sm:flex-row items-center justify-between gap-6 shadow-xl">
         <div className="flex flex-col gap-1 text-center sm:text-left">
           <h3 className="text-xl sm:text-2xl font-bold">Partner With Us for a Greener Tomorrow</h3>
-          <p className="text-xs sm:text-sm text-stone-300">
+          <p className="text-sm sm:text-base text-stone-300">
             Learn how our extraction technology and eco-products can integrate into your supply chain.
           </p>
         </div>

@@ -5,12 +5,13 @@ import Banner from "../../Components/Banner";
 import Body from "../../Components/Body";
 import CardsPage from "../../Components/CardBody";
 import NewsPage from "../../Components/News";
+import ContactCTA from "../../Components/ContactCTA";
 
 export default function Page() {
   return (
     <main className="min-h-screen bg-white">
       {/* Hero Section with Responsive Background */}
-      <div className="relative min-h-screen w-full flex flex-col justify-between pb-12 overflow-hidden bg-[#2D382B]">
+      <div className="relative min-h-screen w-full flex flex-col justify-between pb-12 overflow-hidden bg-[#14261C]">
         <Image
           src={background}
           alt="Banana Plantation & Sustainable Agriculture Background"
@@ -29,6 +30,7 @@ export default function Page() {
       <Body />
       <CardsPage />
       <NewsPage />
+      <ContactCTA />
     </main>
   );
 }

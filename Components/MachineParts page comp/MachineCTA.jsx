@@ -5,7 +5,7 @@ import { HiOutlineMail, HiOutlinePhone, HiOutlineDocumentDownload } from "react-
 export default function MachineCTA() {
   return (
     <div className="px-4 sm:px-8 lg:px-16 pb-16 max-w-7xl mx-auto">
-      <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#778D4D] via-[#60743B] to-[#343D33] text-white p-8 sm:p-12 lg:p-16 shadow-2xl">
+      <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#2F5A3E] via-[#1F3A2B] to-[#14291E] text-white p-8 sm:p-12 lg:p-16 shadow-2xl">
         
         {/* Background decorative circles */}
         <div className="absolute top-0 right-0 -mr-16 -mt-16 w-80 h-80 rounded-full bg-white/10 blur-2xl pointer-events-none"></div>
@@ -18,7 +18,7 @@ export default function MachineCTA() {
           </span>
 
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-tight">
-            Order Complete Machines or Certified Spare Parts
+            Order Complete Machines or Original Spare Parts
           </h2>
 
           <p className="text-stone-100 text-sm sm:text-base lg:text-lg leading-relaxed">
@@ -45,10 +45,10 @@ export default function MachineCTA() {
           </div>
 
           <div className="flex flex-wrap justify-center gap-6 pt-4 text-xs sm:text-sm text-stone-200 border-t border-white/20 w-full">
-            <span>✓ Genuine OEM Spare Parts</span>
-            <span>✓ Direct Factory Warranty</span>
-            <span>✓ Worldwide Shipping Available</span>
-            <span>✓ Lifetime Technical Support</span>
+            <span>✓ Original Spare Parts</span>
+            <span>✓ Direct From Manufacturer</span>
+            <span>✓ Export Enquiries Welcome</span>
+            <span>✓ After-Sales Technical Guidance</span>
           </div>
 
         </div>

@@ -74,7 +74,7 @@ export default function NewsPage() {
           </div>
 
           <div className="p-6 flex flex-col gap-3">
-            <div className="flex items-center gap-4 text-xs text-gray-400 font-medium">
+            <div className="flex items-center gap-4 text-xs text-gray-500 font-medium">
               <span className="flex items-center gap-1">
                 <HiOutlineLocationMarker className="text-sm text-[#778D4D]" />
                 Sindh, Pakistan
@@ -89,11 +89,11 @@ export default function NewsPage() {
               A Second Harvest for Rural Pakistan
             </h3>
 
-            <p className="text-xs sm:text-sm text-gray-600 leading-relaxed font-normal">
+            <p className="text-sm sm:text-base text-gray-600 leading-relaxed font-normal">
               Pakistan grows bananas on about 39,000 hectares, around 96% of it in Sindh. Each plant fruits only once, so after harvest its stem is usually dumped or burned.
             </p>
 
-            <p className="text-xs sm:text-sm text-gray-600 leading-relaxed font-normal">
+            <p className="text-sm sm:text-base text-gray-600 leading-relaxed font-normal">
               Turning those stems into fiber gives farming families a second product to sell from the same field, and creates local work in extraction, spinning, weaving and handicrafts, much of it open to rural women.
             </p>
           </div>
@@ -116,7 +116,7 @@ export default function NewsPage() {
               </div>
 
               <div className="flex flex-col flex-1 gap-1.5 w-full">
-                <span className="text-[11px] font-bold text-[#778D4D] uppercase tracking-wider">
+                <span className="text-xs font-bold text-[#778D4D] uppercase tracking-wider">
                   {item.category}
                 </span>
 
@@ -124,11 +124,11 @@ export default function NewsPage() {
                   {item.title}
                 </h4>
 
-                <p className="text-xs text-gray-600 leading-relaxed">
+                <p className="text-sm text-gray-600 leading-relaxed">
                   {item.desc}
                 </p>
 
-                <span className="text-[11px] text-gray-400 italic mt-1">
+                <span className="text-xs text-gray-500 mt-1">
                   {item.fact}
                 </span>
               </div>
