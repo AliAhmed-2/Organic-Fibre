@@ -1,8 +1,8 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import plant2 from "public/plant2.jpg";
-import seating from "public/seating.jpg";
+import bananaFiberDrying from "public/banana_fiber_drying.jpg";
+import bananaPlantation from "public/banana_plantation.jpg";
 import { HiOutlineCog, HiOutlineSparkles, HiOutlineUserGroup, HiArrowRight } from "react-icons/hi";
 
 export default function Body() {
@@ -34,8 +34,8 @@ export default function Body() {
           {/* Plant Image */}
           <div className="lg:col-span-5 relative w-full h-80 sm:h-96 rounded-3xl overflow-hidden shadow-2xl border-4 border-white/10 group">
             <Image
-              src={plant2}
-              alt="Banana Stem and Natural Fiber Processing"
+              src={bananaFiberDrying}
+              alt="Banana fiber drying on lines in a banana field"
               fill
               className="object-cover transition-transform duration-700 group-hover:scale-105"
             />
@@ -103,8 +103,8 @@ export default function Body() {
         {/* Wide Seating / Workshop Visual */}
         <div className="relative w-full h-48 sm:h-72 rounded-3xl overflow-hidden shadow-2xl border-4 border-white/10">
           <Image
-            src={seating}
-            alt="Organic Fiber Sustainable Workshop & Living"
+            src={bananaPlantation}
+            alt="Banana plantation"
             fill
             className="object-cover"
           />

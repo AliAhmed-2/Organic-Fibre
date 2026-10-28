@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import newsImage from "public/newsimage.png";
+import newsImage from "public/handloom_weaver.jpg";
 import { HiArrowRight, HiOutlineCalendar, HiOutlineClock, HiOutlineNewspaper } from "react-icons/hi";
 
 export default function NewsPage() {
@@ -10,7 +10,7 @@ export default function NewsPage() {
       id: 1,
       title: "Low Mechanical Energy in Fiber Processing",
       desc: "How modern decorticator machines reduce electrical consumption by 40% while preserving fiber tensile integrity.",
-      img: "/mechanical.jpg",
+      img: "/machine/machine_full.jpg",
       date: "December 16, 2024",
       readTime: "3 min read",
       category: "Clean Tech",
@@ -19,7 +19,7 @@ export default function NewsPage() {
       id: 2,
       title: "Zero Harmful Chemicals in Natural Extraction",
       desc: "Pure mechanical extraction preserves water ecosystems and creates 100% skin-safe organic fiber for home and apparel.",
-      img: "/chemical.png",
+      img: "/natural_fiber_strands.jpg",
       date: "November 11, 2024",
       readTime: "4 min read",
       category: "Sustainability",
@@ -28,7 +28,7 @@ export default function NewsPage() {
       id: 3,
       title: "Hyper-Local Farming: Slashing Transportation Footprint",
       desc: "Processing stems directly at farming cooperatives eliminates long-distance transit emissions and boosts farmer revenue.",
-      img: "/tree.jpg",
+      img: "/banana_harvest.jpg",
       date: "November 03, 2024",
       readTime: "5 min read",
       category: "Circular Economy",
@@ -67,7 +67,7 @@ export default function NewsPage() {
           <div className="relative aspect-[16/10] w-full overflow-hidden bg-stone-100">
             <Image
               src={newsImage}
-              alt="Community Fiber Processing"
+              alt="Artisan weaving on a handloom"
               fill
               className="object-cover transition-transform duration-700 group-hover:scale-105"
             />

@@ -76,7 +76,7 @@ export default function MachineDiagram({ onSelectPart }) {
               {/* Machine Image */}
               <div className="relative w-full h-full p-3 sm:p-6">
                 <Image
-                  src={MACHINE_PARTS.find(p => p.id === 1) ? "/machine/machine_full.jpg" : "/plant.png"}
+                  src={MACHINE_PARTS.find(p => p.id === 1) ? "/machine/machine_full.jpg" : "/banana_tree.jpg"}
                   alt="Banana Extractor Machine Schematic"
                   fill
                   className="object-contain drop-shadow-md select-none transition-transform duration-500 group-hover:scale-[1.02]"

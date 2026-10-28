@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import plant from "public/plant.png";
+import bananaTree from "public/banana_tree.jpg";
 import { HiArrowRight, HiOutlineShieldCheck, HiOutlineSparkles, HiOutlineCog } from "react-icons/hi";
 
 export default function Banner() {
@@ -71,14 +71,19 @@ export default function Banner() {
         </div>
 
         {/* Right Hero Graphic */}
-        <div className="relative w-full max-w-md lg:max-w-lg aspect-square flex items-center justify-center">
+        <div className="relative w-full max-w-md lg:max-w-lg aspect-square flex items-center justify-center shrink-0 lg:w-[30rem]">
           <div className="absolute inset-0 bg-white/5 rounded-full blur-3xl transform scale-90"></div>
-          <Image
-            src={plant}
-            alt="Banana Plant and Fiber"
-            className="object-contain drop-shadow-2xl z-10 transition-transform duration-700 hover:scale-105"
-            priority
-          />
+          <div className="relative w-full h-full rounded-[2.5rem] overflow-hidden border-4 border-white/15 shadow-2xl z-10 group">
+            <Image
+              src={bananaTree}
+              alt="Banana plant with a fruit bunch"
+              fill
+              sizes="(min-width: 1024px) 512px, 100vw"
+              placeholder="blur"
+              className="object-cover transition-transform duration-700 group-hover:scale-105"
+              priority
+            />
+          </div>
         </div>
 
       </div>

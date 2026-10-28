@@ -1,5 +1,5 @@
 import Image from "next/image";
-import background from "public/background.jpg";
+import background from "public/banana_leaf_bg.jpg";
 import NavBar from "../../Components/Nav";
 import Banner from "../../Components/Banner";
 import Body from "../../Components/Body";
